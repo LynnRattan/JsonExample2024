@@ -1,4 +1,5 @@
 ﻿using JsonExample2024.Models;
+using JsonExample2024.Service;
 using System.Text.Json;
 
 
@@ -6,6 +7,18 @@ namespace JsonExample2024
 {
     internal class Program
     {
+        MonkeyService monkeyService = new MonkeyService();
+        public static string BasicSerializtionExercise(Monkey monkey)
+        {
+            string json = JsonSerializer.Serialize(monkey);
+            Console.WriteLine(json);
+            return json;
+        }
+
+        
+
+           
+        }
         public static string BasicSerializtionExmaple(Student student)
         {
             string json = JsonSerializer.Serialize(student);
